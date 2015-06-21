@@ -852,7 +852,7 @@ function loadVoice(url, callback) {
 	// public
 	if (typeof url !== 'string') {
 		setVoiceData(url);
-		if (callback) callback(false, url.voice_id);
+		if (callback) callback(true, url.voice_id);
 	} else if (url) new HttpRequest(url, voiceRequestCallback, callback);
 }
 
